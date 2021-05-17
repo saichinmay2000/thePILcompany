@@ -3,6 +3,7 @@ import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
+import 'package:thepilcompany/CareerAssesment.dart';
 import 'package:toast/toast.dart';
 
 class Otp extends StatelessWidget {
@@ -14,6 +15,11 @@ class Otp extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
+                Container(
+                  width: 150,
+                  height: 200,
+                  child: Image.asset("assets/logo.jpg"),
+                ),
                 OTPTextField(
                   length: 6,
                   width: MediaQuery.of(context).size.width,
