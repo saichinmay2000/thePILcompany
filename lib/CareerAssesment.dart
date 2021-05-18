@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:argon_buttons_flutter/argon_buttons_flutter.dart';
-import 'package:thepilcompany/otp.dart';
+
+import 'chooseoption.dart';
 
 class Career extends StatelessWidget {
   @override
@@ -38,6 +39,8 @@ class Career extends StatelessWidget {
                           if(btnState == ButtonState.Idle)
                             {
                               startLoading();
+
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Choose()));
                             }
                           else
                             {
