@@ -10,6 +10,7 @@ class Otp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         child: SafeArea(
           child: Center(
@@ -27,6 +28,12 @@ class Otp extends StatelessWidget {
                   fieldWidth: 55,
                   fieldStyle: FieldStyle.box,
                   outlineBorderRadius: 15,
+                  onChanged: (pin){
+                    print("Changed Pin" +pin);
+                  },
+                  onCompleted: (pin){
+                    print("Completed Pin" +pin);
+                  },
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15),

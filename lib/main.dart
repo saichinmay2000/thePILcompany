@@ -15,12 +15,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'thePILcompany',
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(
-        nextScreen: Login(),
-        duration: 5000,
-        splash: "assets/logo.jpg",
-        pageTransitionType: PageTransitionType.leftToRight,
-        splashTransition: SplashTransition.scaleTransition,
+      home: Container(
+        width: 150,
+        height: 200,
+        child: AnimatedSplashScreen(
+          nextScreen: Login(),
+          duration: 5000,
+          splash: "assets/logo.jpg",
+          pageTransitionType: PageTransitionType.leftToRight,
+          splashTransition: SplashTransition.scaleTransition,
+        ),
       )
     );
   }
