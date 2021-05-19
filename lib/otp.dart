@@ -57,8 +57,7 @@ class Otp extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 32),
-                child: ElevatedButton(
-                  // style: ElevatedButton.styleFrom(primary: Colors.white),
+                child: TextButton(
                   onPressed: () {
                     Toast.show("Login Succeeded!!!\n Welcome to PIL", context,
                         duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
@@ -67,7 +66,10 @@ class Otp extends StatelessWidget {
                   },
                   child: Text(
                     "Login",
-                    style: TextStyle(color: Colors.black, fontSize: 16),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               )

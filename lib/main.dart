@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
             elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(primary: Colors.white)),
             textButtonTheme: TextButtonThemeData(
-                style: TextButton.styleFrom(primary: Colors.white))),
+                style: TextButton.styleFrom(
+              primary: Colors.black,
+              textStyle: TextStyle(color: Colors.white),
+            ))),
         home: Container(
           width: 150,
           height: 200,
