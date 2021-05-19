@@ -13,19 +13,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'thePILcompany',
-      debugShowCheckedModeBanner: false,
-      home: Container(
-        width: 150,
-        height: 200,
-        child: AnimatedSplashScreen(
-          nextScreen: Login(),
-          duration: 5000,
-          splash: "assets/logo.jpg",
-          pageTransitionType: PageTransitionType.leftToRight,
-          splashTransition: SplashTransition.scaleTransition,
-        ),
-      )
+        title: 'thePILcompany',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: Colors.black,
+            elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(primary: Colors.white)),
+            textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(primary: Colors.white))),
+        home: Container(
+          width: 150,
+          height: 200,
+          child: AnimatedSplashScreen(
+            nextScreen: Login(),
+            duration: 5000,
+            splash: "assets/logo.jpg",
+            pageTransitionType: PageTransitionType.leftToRight,
+            splashTransition: SplashTransition.scaleTransition,
+          ),
+        )
     );
   }
 }
