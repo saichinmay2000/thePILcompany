@@ -25,12 +25,13 @@ class MyApp extends StatelessWidget {
               textStyle: TextStyle(color: Colors.white),
             ))),
         home: Container(
-          width: 150,
-          height: 200,
+          width: 250,
+          height: 500,
           child: AnimatedSplashScreen(
+            backgroundColor: Colors.black,
             nextScreen: Login(),
             duration: 5000,
-            splash: "assets/logo.jpg",
+            splash: "assets/pil_logo.png",
             pageTransitionType: PageTransitionType.leftToRight,
             splashTransition: SplashTransition.scaleTransition,
           ),

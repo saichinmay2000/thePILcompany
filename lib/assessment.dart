@@ -12,9 +12,12 @@ class Assessment extends StatelessWidget {
           children: <Widget>[
             Container(
               child: SafeArea(
-                child: Text(
-                    "Questions Coming Soon\nStayTuned!",
-                    style: TextStyle(color: Colors.white),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                      "CAREER ASSESSMENT",
+                      style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             )

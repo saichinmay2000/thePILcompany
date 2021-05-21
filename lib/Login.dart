@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
                   child: Container(
                     height: 200,
                     width: 150,
-                    child: Image.asset("assets/logo.jpg"),
+                    child: Image.asset("assets/pil_logo.png"),
                   ),
                 ),
               ),

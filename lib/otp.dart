@@ -4,6 +4,7 @@ import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 import 'package:thepilcompany/CareerAssesment.dart';
+import 'package:thepilcompany/chooseoption.dart';
 import 'package:toast/toast.dart';
 
 class Otp extends StatelessWidget {
@@ -22,7 +23,7 @@ class Otp extends StatelessWidget {
               Container(
                 width: 150,
                 height: 200,
-                child: Image.asset("assets/logo.jpg"),
+                child: Image.asset("assets/pil_logo.png"),
               ),
               SizedBox(
                 height: 32,
@@ -62,7 +63,7 @@ class Otp extends StatelessWidget {
                     Toast.show("Login Succeeded!!!\n Welcome to PIL", context,
                         duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Career()));
+                        MaterialPageRoute(builder: (context) => Options()));
                   },
                   child: Text(
                     "Login",
