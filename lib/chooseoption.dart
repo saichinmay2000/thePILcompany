@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Options extends StatelessWidget {
@@ -8,108 +9,117 @@ class Options extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 "CHOOSE YOUR PREFERRED OPTION",
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 16,
+              ),
               Container(
-                height: 150,
                 width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.white38,
-                  borderRadius: BorderRadius.circular(10)
-                ),
+                    color: Colors.white38,
+                    borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   children: <Widget>[
-                    Image.asset("assets/logo_white.png", height: 100, width: 150,),
+                    Image.asset(
+                      "assets/logo_white.png",
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.fill,
+                    ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(20.0,0,0,0),
+                        Flexible(
                           child: Text(
-                              "YOUTUBE GUIDANCE & GAME GUIDANCE",
-                              textAlign: TextAlign.start,
+                            "YOUTUBE GUIDANCE & GAME GUIDANCE",
+                            textAlign: TextAlign.start,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(20.0,0,0,0),
-                          child: IconButton(
-                            icon: const Icon(Icons.help),
-                          ),
+                        IconButton(
+                          icon: const Icon(Icons.help),
+                          onPressed: () {},
                         )
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Container(
-                height: 150,
                 width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                     color: Colors.white38,
-                    borderRadius: BorderRadius.circular(10)
-              ),
+                    borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Image.asset("assets/logo_white.png", height: 100, width: 150,),
+                    Image.asset(
+                      "assets/logo_white.png",
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.fill,
+                    ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Padding(
-                            padding: const EdgeInsets.fromLTRB(20.0, 0, 0, 0),
-                            child: Text(
-                              "GAME DEVELOPMENT",
-                              textAlign: TextAlign.start,
-                            ),
+                        Flexible(
+                          child: Text(
+                            "GAME DEVELOPMENT",
+                            textAlign: TextAlign.start,
+                          ),
                         ),
-                        Padding(
-                            padding: const EdgeInsets.fromLTRB(20.0, 0, 0, 0),
-                            child: IconButton(
-                              icon: const Icon(Icons.help),
-                            ),
+                        IconButton(
+                          icon: const Icon(Icons.help),
                         ),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Container(
-                height: 150,
                 width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                     color: Colors.white38,
-                    borderRadius: BorderRadius.circular(10)
-                ),
-              child: Column(
-                children: <Widget>[
-                  Image.asset("assets/logo_white.png", height: 100, width: 150,),
-                  Row(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20.0, 0, 0, 0),
-                        child: Text(
-                          "CERTIFICATION COURSES",
-                          textAlign: TextAlign.start,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Column(
+                  children: <Widget>[
+                    Image.asset(
+                      "assets/logo_white.png",
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.fill,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Flexible(
+                          child: Text(
+                            "CERTIFICATION COURSES",
+                            textAlign: TextAlign.start,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20.0, 0, 0, 0),
-                        child: IconButton(
+                        IconButton(
                           icon: const Icon(Icons.help),
                         ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ],
           ),
