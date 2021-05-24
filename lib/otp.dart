@@ -3,11 +3,17 @@ import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
-import 'package:thepilcompany/CareerAssesment.dart';
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as grad;
 import 'package:thepilcompany/chooseoption.dart';
-import 'package:toast/toast.dart';
+
 
 class Otp extends StatelessWidget {
+  Gradient g1 = LinearGradient(
+    colors: [
+      Color(0xFF7F00FF),
+      Color(0xFFE100FF),
+    ],
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,16 +29,17 @@ class Otp extends StatelessWidget {
               Container(
                 width: 150,
                 height: 200,
-                child: Image.asset("assets/pil_logo.png"),
+                child: Image.asset("assets/logo_white.png"),
               ),
               SizedBox(
                 height: 32,
               ),
               Text(
-                "OTP: ",
+                "Enter your One-Time Password(OTP)",
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w100,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
               SizedBox(
@@ -58,20 +65,22 @@ class Otp extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 32),
-                child: TextButton(
-                  onPressed: () {
-                    Toast.show("Login Succeeded!!!\n Welcome to PIL", context,
-                        duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Options()));
+                child: grad.GradientElevatedButton(
+                  gradient: g1,
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Options()));
                   },
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
-                  ),
+                  child: Text("Login"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 0),
+                child: grad.GradientElevatedButton(
+                  gradient: g1,
+                  onPressed: (){
+
+                  },
+                  child: Text("Resend OTP"),
                 ),
               )
             ],

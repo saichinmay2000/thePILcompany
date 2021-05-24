@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.black,
             nextScreen: Login(),
             duration: 5000,
-            splash: "assets/pil_logo.png",
+            splash: "assets/logo_white.png",
             pageTransitionType: PageTransitionType.leftToRight,
             splashTransition: SplashTransition.scaleTransition,
           ),

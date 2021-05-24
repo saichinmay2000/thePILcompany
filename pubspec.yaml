@@ -30,6 +30,7 @@ dependencies:
   flutter_svg: ^0.22.0
   argon_buttons_flutter: ^1.1.0
   flutter_spinkit: ^5.0.0
+  gradient_ui_widgets: ^1.0.2-nullsafety
 
 
 
